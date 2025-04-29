@@ -1,0 +1,21 @@
+class Solution {
+    // Function to get the count of elements between num1 and num2 in array arr.
+    public int getCount(ArrayList<Integer> arr, int num1, int num2) {
+        // Your Code goes here.
+        int i = 0;
+        while(i < arr.size() && arr.get(i) != num1){
+            i++;
+        }
+        int j = arr.size()-1;
+        while(j >= 0 && arr.get(j) != num2){
+            j--;
+        }
+        int count = 0;
+        if(i < arr.size() && j >= 0){
+            for(int k = i+1 ; k < j ; k++){
+                count++;
+            }
+        }
+        return count;
+    }
+}
